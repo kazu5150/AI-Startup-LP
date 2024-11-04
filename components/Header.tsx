@@ -12,6 +12,7 @@ export function Header() {
             <li><Link href="#solutions" className="text-gray-200 hover:text-yellow-400">ソリューション</Link></li>
             <li><Link href="#features" className="text-gray-200 hover:text-yellow-400">機能</Link></li>
             <li><Link href="#testimonials" className="text-gray-200 hover:text-yellow-400">お客様の声</Link></li>
+            <li><Link href="#team" className="text-gray-200 hover:text-yellow-400">私たちのスタッフ紹介</Link></li>
             <li><Link href="#contact" className="text-gray-200 hover:text-yellow-400">お問い合わせ</Link></li>
           </ul>
         </nav>
