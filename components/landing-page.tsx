@@ -6,6 +6,7 @@ import { SolutionsSection } from './SolutionsSection';
 import { FeaturesSection } from './FeaturesSection';
 import { TestimonialsSection } from './TestimonialsSection';
 import { ContactSection } from './ContactSection';
+import { TeamSection } from './TeamSection';
 import { Footer } from './Footer';
 
 export function LandingPageComponent() {
@@ -17,6 +18,7 @@ export function LandingPageComponent() {
         <SolutionsSection />
         <FeaturesSection />
         <TestimonialsSection />
+        <TeamSection />
         <ContactSection />
       </main>
       <Footer />

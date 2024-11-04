@@ -24,7 +24,7 @@ export function Footer() {
             <h3 className="text-xl font-bold mb-4 text-white">フォローする</h3>
             <div className="flex space-x-4">
               <Link href="#" className="hover:text-yellow-400"><Facebook className="w-6 h-6" /></Link>
-              <Link href="#" className="hover:text-yellow-400"><Twitter className="w-6 h-6" /></Link>
+              <Link href="https://twitter.com/matsuzawa160611" className="hover:text-yellow-400"><Twitter className="w-6 h-6" /></Link>
               <Link href="#" className="hover:text-yellow-400"><Linkedin className="w-6 h-6" /></Link>
             </div>
           </div>

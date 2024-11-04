@@ -11,7 +11,7 @@ export function ContactSection() {
         </h2>
         <p className="text-xl mb-8">まずは無料デモをお試しください</p>
         <Button asChild size="lg">
-          <Link href="#contact" className="inline-flex items-center">
+          <Link href="/demo" className="inline-flex items-center">
             デモを申し込む
             <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
