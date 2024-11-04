@@ -1,7 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { OpenAI } from 'openai';
 
-const client = new OpenAI();
+const client = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+  baseURL: process.env.OPENAI_API_URL,
+});
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
@@ -23,6 +26,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       res.status(200).json({ content: response.choices[0].message.content });
     } catch (error) {
+      console.error('API Error:', error);
       res.status(500).json({ error: 'API呼び出しに失敗しました' });
     }
   } else {

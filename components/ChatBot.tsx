@@ -5,31 +5,16 @@ import { Button } from "@/components/ui/button";
 
 export function ChatBot() {
   const [messages, setMessages] = useState([
-    { role: 'assistant', content: 'こんにちは！AIを使ってどのようにお手伝いできますか？' }
+    { role: 'assistant', content: 'こんにちは！ お手伝いできることはありますか？' }
   ]);
   const [input, setInput] = useState('');
 
-  const handleSend = async () => {
+  const handleSend = () => {
     if (!input.trim()) return;
 
     const newMessages = [...messages, { role: 'user', content: input }];
     setMessages(newMessages);
     setInput('');
-
-    try {
-      const response = await fetch('/api/chat', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ messages: newMessages }),
-      });
-
-      const data = await response.json();
-      setMessages([...newMessages, { role: 'assistant', content: data.content }]);
-    } catch (error) {
-      console.error('Error:', error);
-    }
   };
 
   return (
@@ -51,7 +36,7 @@ export function ChatBot() {
           className="flex-grow p-2 rounded-l-lg bg-gray-700 text-white"
           placeholder="メッセージを入力..."
         />
-        <Button onClick={handleSend} className="rounded-r-lg">
+        <Button onClick={handleSend} className="rounded-r-lg bg-yellow-400 text-black hover:bg-yellow-500">
           送信
         </Button>
       </div>

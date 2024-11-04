@@ -17,7 +17,7 @@ export default function Page() {
       <LandingPageComponent />
       <div className="fixed top-20 right-4 z-50">
         <Button onClick={toggleChatBot} className="mb-2 bg-yellow-400 text-black hover:bg-yellow-500">
-          {isChatBotVisible ? 'AIチャットを閉じる' : 'AIチャットと会話'}
+          {isChatBotVisible ? 'チャットを閉じる' : 'チャットを開く'}
         </Button>
         {isChatBotVisible && <ChatBot />}
       </div>
