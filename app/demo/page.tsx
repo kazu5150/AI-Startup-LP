@@ -12,9 +12,8 @@ export default function DemoPage() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // メール送信機能は一時的に削除
     console.log('フォームデータ:', formData);
   };
 
