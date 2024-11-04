@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export function HeroSection() {
   return (
@@ -22,7 +22,7 @@ export function HeroSection() {
               </Link>
             </Button>
           </div>
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 flex justify-center md:justify-end">
             <Image src="/image1.webp" alt="AI業務効率化イメージ" width={600} height={400} className="rounded-lg shadow-xl" />
           </div>
         </div>
